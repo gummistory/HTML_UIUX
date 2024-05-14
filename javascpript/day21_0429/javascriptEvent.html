@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Event</title>
+    <script>
+        //Event 2가지 방식
+        //1. 인라인 정의 방식
+        //2. 내부 정의 방식 
+        window.onload = function(){
+            let btn = document.getElementById("target");
+            btn.addEventListener("click" ,function(event){
+                alert('Hello World' + event.target.value);
+                //alert('Hello World' + btn.value);
+            })
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="alert('Hello World'+ this.value)" value="인라인 이벤트">
+    <input type="button" id="target" value="내부 이벤트"> 
+</body>
+</html>

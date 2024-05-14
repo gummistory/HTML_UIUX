@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // var , let , consst
+        // 함수의 호이팅
+        // 화살표 함수 
+        // this -> 자기자신, 즉 object를 말함 
+
+        this.num = 10; //window 의 this 
+        let obj = {
+            num: 5, //객체는 : , 
+            add1:function(a){
+                console.log(this.num + a, this);
+            },
+            add2:(a)=> {
+                console.log(this.num + a, this); //this => window , this.num 없는 값
+            }
+        }.bind(this); // bind -> object의 this 가 됨 
+
+        obj.add1(3); //함수의 호출 
+        obj.add2(3);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

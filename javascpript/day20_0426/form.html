@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form tag 제거 하기</title>
+    <script>
+        function memChk(frm){
+            //document.memfrm.id.value = "홍길동";
+            //frm.id.value
+            let checkCnt = document.querySelectorAll('.chk:checked').length;
+            if(checkCnt == 0) {
+                alert("관심분야를 입력하세요")
+                return false;
+            }
+
+          
+
+            // if(frm.id.value == ""){ //값이 입력이 안됨 
+            //     alert("아이디를 입력하세요");
+            //     frm.id.focus();
+            //     return false;
+            // }
+            // if(frm.pwd1.value == ""){ //값이 입력이 안됨 
+            //     alert("비밀번호를 입력하세요");
+            //     frm.pwd1.focus();
+            //     return false;
+            // }
+            // if(frm.pwd2.value == ""){ //값이 입력이 안됨 
+            //     alert("비밀번호 확인 입력하세요");
+            //     frm.pwd2.focus();
+            //     return false;
+            // }
+            // if(frm.pwd1.value !== frm.pwd2.value ){ //값이 입력이 안됨 
+            //     alert("비밀번호가 일치하지 않습니다.");
+            //     frm.pwd2.focus();
+            //     return false;
+            // }
+            // if(frm.email.value == ""){ //값이 입력이 안됨 
+            //     alert("이메일을 입력하세요");
+            //     frm.email.focus();
+            //     return false;
+            // }
+            // if(frm.gender.value == ""){ //값이 입력이 안됨 
+            //     alert("성별을 입력하세요");
+            //     frm.gender.focus();
+            //     return false;
+            // }
+            // if(frm.job.value == ""){ //값이 입력이 안됨 
+            //     alert("직업을 입력하세요");
+                
+            //     return false;
+            // }
+            // if(frm.hobby.value == ""){ //값이 입력이 안됨 
+            //     alert("관심분야를 입력하세요"); 
+            //     return false;
+            // }
+            // if(frm.content.value == ""){ //값이 입력이 안됨 
+            //     alert("가입인사를 입력하세요"); 
+            //     return false;
+            // }
+        }
+    </script>
+</head>
+<body>
+    <form action="http://www.naver.com" name="memfrm" onsubmit="return memChk(this)">
+        <table>
+            <tr>
+                <td><label>아이디</label></td>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <td><label>비밀번호</label></td>
+                <td><input type="password" name="pw"></td>
+            </tr>
+            <tr>
+                <td><label>비밀번호 확인</label></td>
+                <td><input type="password" name="pwd2"></td>
+            </tr>
+            <tr>
+                <td><label>이메일</label></td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td><label>성별</label></td>
+                <td>
+                    <input type="radio" name="gender">남성
+                    <input type="radio" name="gender">여성
+                </td>
+            </tr>
+            <tr>
+                <td><label>직업선택</label></td>
+                <td>
+                    <select name="job">
+                        <option value="">--직업선택--</option>
+                        <option value="job1">개발자</option>
+                        <option value="job2">호텔리어</option>
+                        <option value="job3S">회사원</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>관심분야</label></td>
+                <td>
+                    <input type="checkbox" name="hobby" value="h1" class="chk">운동
+                    <input type="checkbox" name="hobby" value="h2" class="chk">독서
+                    <input type="checkbox" name="hobby" value="h3" class="chk">등산
+            
+                </td>
+            </tr>
+            <tr>
+                <td><label>가입인사</label></td>
+                <td>
+                    <textarea rows="7" cols="25" name="content"></textarea>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="회원가입">
+        <input type="reset" value="회원취소">
+    </form>
+</body>
+</html>

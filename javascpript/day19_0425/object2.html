@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 객체 예제 1</title>
+    <script>
+        // 문자열 객체
+        // 인덱스 번호 
+        //chatAt(), indexof(), substring(),
+        //length
+
+        // 간편 식 : let str = "hong";
+        //let str = new String("hong");
+        let userName = prompt("이름 입력 : ", "");
+        document.write(userName, "<br/>");
+
+        let userNum = prompt("번호 입력 (구분없이 입력) : ", "01012345678")
+        let result =userNum.substring(0,userNum.length - 4) + "****";
+        document.write(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

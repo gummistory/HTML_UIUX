@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - getElementsByClassName </title>
+    <script>
+        // getElementById()
+        // querySelector()
+        // getElementByClassName()
+        // qureySelectorAll
+
+        window.onload = function () { //body 부분이 화면에 다 표현될떄까지 기다리라
+            let ptag1 = document.getElementById("p1"); //1
+            ptag1.innerHTML = "반갑습니다." //innerHTML p tag 에 있는 텍스트 값
+
+            let ptag2 = document.querySelector("#p2"); //2
+            ptag2.innerHTML = "루씨"; 
+
+
+            let ptag3 = document.getElementsByClassName("p3");
+            ptag3[1].innerHTML = "아카데미"; //p class 이름이 출력됨
+        };
+    </script>
+</head>
+
+<body>
+    <p id="p1">안녕하세요</p>
+    <p id="p2">스미뜨</p>
+
+    <p class="p3">코리아</p>
+    <script>
+        // let ptag = document.getElementById("p1"); // 여기에 쓰거나 저 위에 쓰거나!
+        // ptag.innerHTML = "반갑습니다."
+
+    </script>
+</body>
+
+</html>

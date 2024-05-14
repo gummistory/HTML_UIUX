@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>약관 동의 페이지 만들기 </title>
+    <script>
+        function accpetAll(){
+           let chAll = document.querySelector('#checkAll');
+           
+           if(chAll.checked){
+            let checkboxs = document.querySelectorAll('.chk');
+            
+                for(let checkbox of checkboxs){  //document.qureyselcetorall에 있는 값을 하나씩 넣어줌 
+                checkbox.checked = true;
+                 }
+            }else{
+                let checkboxs = document.querySelectorAll('.chk');
+                for(let checkbox of checkboxs){  //document.qureyselcetorall에 있는 값을 하나씩 넣어줌 
+                checkbox.checked = false;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="3">
+                <input type="checkbox" id="checkAll" onclick="accpetAll()"> 전체동의
+            </td>
+            
+        </tr>
+        <tr>
+             <td><input type="checkbox" class="chk"> 필수동의1</td>
+            <td><input type="checkbox" class="chk"> 필수동의2</td> 
+            <td> <input type="checkbox" class="chk"> 필수동의3</td>
+        </tr>
+    </table>
+
+</body>
+</html>

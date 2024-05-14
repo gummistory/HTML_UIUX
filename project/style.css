@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1400px;
+    
+}
+
+
+img {
+    border-width: 0px;
+}
+
+.topwhite{
+    width: 100%;
+    width: 1400px;
+    background-color: #fff;
+}
+
+.topwhite header{
+    width: 1300px;
+    height: 90px;
+    background-color: #fff;
+    padding-top: 12px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.topwhite header .toplogo{
+    width: 149px;
+    height: 60px;
+    float: left;
+    right: 10px;
+}
+
+.topwhite header .topmenu ul {
+    
+    display: flex; /* 가로로 배치 */
+    /* 요소들을 가로로 균등하게 분산 */
+    list-style: none; /* 리스트 스타일 제거 */
+    padding: 2px; /* 내부 여백 제거 */
+}
+
+.topmenu ul li {
+   padding: 0px 35px;
+   padding-top: 22px;
+   font-size: 17px;
+   letter-spacing: 1px;
+
+}
+
+.mainimg {
+    width: 100px; /* 헤더의 너비와 동일하게 설정 */
+    height: auto;
+}
+
+.mainTitle h3 {
+    font-size: 40px;
+    margin-right: 100px;
+    font-weight: 900px;
+    
+}
+
+.main_section {
+    width: 1450px;
+    margin-bottom: 40px;
+    background-color: rgb(246, 246, 246);
+    margin-right: 3\0px;
+    padding: 60px 110px;
+}
+
+
+.mainTitle > span {
+    font-size: 23px;
+    font-weight: 5px;
+    
+}
+
+
+
+.menu_01 {
+    background-image: url(./index/menu_01.jpg);
+    height: 260px;
+    background-size: 100% 100%;
+    margin-bottom: 5px;
+    width: 370px;
+  
+}
+.menu_02 {
+    background-image: url(./index/menu_02.jpg);
+    height: 260px;
+    background-size: 100% 100%;
+    margin-bottom: 5px;
+    width: 370px;
+}
+.menu_03 {
+    background-image: url(./index/menu_02.jpg);
+    height: 260px;
+    background-size: 100% 100%;
+    margin-bottom: 5px;
+    width: 370px;
+}
+
+.main_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;    
+    padding-top: 30px;
+    
+    
+}
+
+
+
+.main_box .home {
+   
+ background-color: white;
+}
+
+.main__info {
+    text-align: center;
+}
+
+.main__info .info1{
+    
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main__info .info2 {
+    padding-top: 10px;
+}
+.main__info .info3 {
+    padding-top: 5px;
+}

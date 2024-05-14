@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>552page</title>
+    <script>
+        function comEpare(a,b){
+           var num1 = parseFloat(prompt("첫번째 숫자를 입력하세요 :"))
+           var num2 = parseFloat(prompt("두번째 숫자를 입력하세요 :"))
+
+           var largeNum;
+           if(num1 === num2){
+            alert(" 두 숫자는 같습니다.");
+            return;
+           }else if( num1 > num2){
+            largeNum = num1;
+           }else {
+            largeNum = num2;
+           }
+           alert("더 큰 숫자는" + largeNum + "입니다.")
+        }
+        comEpare();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

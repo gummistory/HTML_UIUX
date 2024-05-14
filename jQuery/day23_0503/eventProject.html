@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 크기 클릭이벤트로 설정하기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            let baseFontSize = 14;
+
+            $(".zoomBtnZone button").on("click", zoomInOut); // 함수의 이름만 사용
+
+            function zoomInOut() {
+                if($(this).hasClass("zoomOutBtn")){
+                    if(baseFontSize <= 8) {  // 최소크기 제한
+                        return false;
+                    }
+                    baseFontSize--;
+                }else if($(this).hasClass("zoomInBtn")){
+                    if(baseFontSize >= 20) {  // 최대크기 제한
+                        return false;
+                    }
+                    baseFontSize++;
+                }else {
+                    baseFontSize = 14;
+                }
+
+                $(".fontSize").text(baseFontSize + "px");
+                $("body").css({fontSize:baseFontSize + "px"});
+            }
+            $("select").change(function(){
+               
+                var selectedFont = $(this).val();
+                $("#wrap").css("font-family", $(this).val());
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-size: 14px;
+            font-family: "맑은 고딕";
+        }
+    </style>
+</head>
+
+<body>
+    <p class="zoomBtnZone">
+        <button class="zoomOutBtn">-</button>
+        <button class="originBtn">100%</button>
+        <button class="zoomInBtn">+</button>
+    </p>
+    <select>
+        <option value="궁서체">궁서체</option>
+        <option value="바탕체">바탕체</option>
+        <option value="굴림체">굴림체</option>
+    </select>
+    <p class="fontSize">14px</p>
+    <div id="wrap">
+        화제의 드라마 눈물의 여왕이 드디어 끝났다. 마지막회까지 '사랑의 불시착'이 기록하고 있는 
+        tvN 드라마 시청률 역대 1위를 깰 수 있을지 없을지 우리의 이목을 모았던 작품이다. 
+        아마도 여유롭게 넘지 않았을까 싶다. 아쉬운 결말이긴 하였지만 그래도 해피엔딩이었으니 됐다. 
+        1~2회 정도 더 있다면 딱 좋을 듯 싶지만 이미 끝난거 어쩔 수 없다. 
+        배우분들 수고하셨습니다. 16회 줄거리 및 결말 해석에 대해 살펴보자.
+    </div>
+</body>
+
+</html>

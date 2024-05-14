@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth-child</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //탐색선택자
+        $(function(){
+            $("#menu1 li:nth-child(1)").css("color", "blue")
+            $("#menu1 li:nth-child(2n)").css("color", "red")
+            $("#menu2 li:nth-last-child(2)").css("color", "green")
+
+    });
+    </script>
+
+</head>
+<body>
+    <ul id="menu1">
+        <li>내용1_1</li>
+        <li>내용1_2</li>
+        <li>내용1_3</li>
+        <li>내용1_4</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용2_1</li>
+        <li>내용2_2</li>
+        <li>내용2_3</li>
+    </ul>
+</body>
+
+</html>

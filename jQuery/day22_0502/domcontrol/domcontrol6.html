@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 속성 조작 하는 메소드 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+          //요소의 위치 조작 
+          //position() : 상대 위치값
+          //offset().[left,top] : 절대 위치값
+          // $가 붙은 변수는 보통 제이쿼리에서 선언되는거다 
+          let $txt1 = $(".txt_1 span"),
+          $txt2 = $(".txt_2 span"),
+          $box = $(".box")
+
+          let off_t = $box.offset().top;  //100 브라우저 기준
+          let pos_t = $box.position().top; //50 부모기준, 현재 자신기준 
+
+          $txt1.text(off_t);
+          $txt2.text(pos_t);
+          
+        });
+    </script>
+ <style>
+    *{margin:0;padding:0;}
+    #box_wrap{
+       width:300px;
+       height:200px;
+       margin:50px auto 0;
+       position: relative;
+       background-color:#ccc;
+    }
+    .box{
+       width:50px;height:50px;
+       position:absolute;
+       left:100px;top:50px;
+       background-color:#f00;
+    }
+ </style>
+   
+</head>
+
+<body>
+    <div id="box_wrap">
+        <p class="box">박스</p>
+     </div>
+     <p class="txt_1">절대 top위칫값: <span></span></p>
+     <p class="txt_2">상대 top위칫값: <span></span></p>
+</body>
+
+</html>

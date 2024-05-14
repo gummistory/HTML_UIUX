@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 5</title>
+    <!-- align-self : 특정한 요소를 콕 찝어서 사용 할 수 있음 -->
+    <style>
+        .container{
+            width: 450px;
+            height: 150px;
+            display: flex;
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        .box {
+            padding: 5px 45px;
+            margin: 5px;
+            width: 80px;
+            background-color: #222;
+        }
+        p{
+            color: #fff;
+            text-align: center;
+        }
+        #box1{
+            align-self: flex-start;
+        }
+        #box3{
+            align-self: stretch;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box" id="box3"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+      </div>
+    
+</body>
+</html>

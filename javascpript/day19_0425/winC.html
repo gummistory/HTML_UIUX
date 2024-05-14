@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자식창</title>
+    
+</head>
+<body>
+    <h1>Child</h1>
+    <p>
+        <input type="text" id="childValue" >    <!-- value 속성이 포함되어있음 -->
+        <input type="button" value="send window" onclick="sendVal()">
+    </p>
+    <script>
+
+        document.getElementById("childValue").value = window.opener.document.getElementById("parentValue").value;
+        
+        function sendVal(){
+            window.opener.document.getElementById("parenValue").value = document.getElementById("childValue").value
+            window.close();
+        }
+    </script>
+</body>
+</html>

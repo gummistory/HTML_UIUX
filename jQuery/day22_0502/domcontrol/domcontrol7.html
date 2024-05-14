@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤의 위치를 확인 하는 방법 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //브라우저의 스크롤 수치 조작 
+        //scrollTop(),scrollLeft()
+        //scrolTop(새로운 값), scrollLeft(새로운 값)
+        $(function () {
+        //   let topNum = $("h1").offset().top; //2000px
+        //   console.log(topNum);
+        //   $(window).scrollTop(topNum);
+
+        //   let sct = $(window).scrollTop();
+        //   console.log(sct);
+            $(window).scroll(function(){
+               let sct = $(window).scrollTop();
+               console.log(sct); 
+               if(sct <= 2000){
+                $("body").css({"background":"red"});
+               }else if(sct > 2000 && sct <= 3000){
+                $("body").css({"background":"pink"});
+               }else{
+                $("body").css({"background":"yellow"});
+               }
+            });
+
+        });
+    </script>
+    <style>
+    *{margin:0;padding:0;}
+    body{line-height:1;}
+    #wrap{
+          height:5000px;
+          padding-top:2000px;
+    }
+    </style>
+   
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>위치 메서드</h1>
+  </div>
+</body>
+
+</html>

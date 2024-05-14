@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location 속성</title>
+    <script>
+        let url = prompt("사이트 주소 입력 :", "");
+        location.href = url;
+
+        function site(){
+            location.href = "http://www.google.com";
+        }
+    </script>
+</head>
+<body>
+   <button onclick="site()">사이트 이동</button>
+   
+
+</body>
+</html>

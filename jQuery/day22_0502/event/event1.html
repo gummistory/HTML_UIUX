@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //단독이벤트
+            //$("선택자").이벤트(function(){});
+            //그룹이벤트
+            //$("선택자").on("이벤트종류1 이벤트종류2 이벤트n", funcotion(){});
+            // $("선택자").on("이벤트1 이벤트2 이벤트n":function(){
+
+            // });
+            $(".btn1").click(function(){
+                $(".btn1").parent().next().css({"color":"red"}); 
+            });
+            $(".btn2").on({
+                "mouseover focus":function(){
+                    $(".btn2").parent().next().css({"color":"pink"}); 
+                },
+                "mouseout":function(){
+                    $(".btn2").parent().next().css({"color":"aqua"})
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <p>
+   <button class="btn1">버튼1</button>
+   </p>
+   <p>내용1</p>
+   <p>
+      <button class="btn2">버튼2</button>
+   </p>
+   <p>내용2</p>
+</body>
+</html>

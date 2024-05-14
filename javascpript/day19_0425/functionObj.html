@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 함수형 객체 
+        function CheckWeight(name,height,weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+
+
+            this.getInfo = function(){
+                let str = "";
+                str += "이름: " + this.userName + ",";
+                str += "키: " + this.userHeight + ",";
+                str += "몸무게: " + this.userWeight + ",";
+                
+                return str;
+
+            }
+        }
+        let park = new CheckWeight("박진우", 180, 75);
+        console.log(park);
+        console.log(park.userHeight);
+        console.log(park.userName);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

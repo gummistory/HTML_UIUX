@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 속성 조작 하는 메소드 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //prop() : 선택상자(selected),체크박스(checked), 라디오박스(checked) //true , false
+        //prop("defaultValue")
+        $(function () {
+            let resutl1 = $("#user_name").val(); //form tag에 벨류 값 읽어오기
+            console.log(resutl1);    
+            $("#user_id").val("smith"); 
+            console.log($("#user_id").val())
+
+            let resutl3 =$("#user_id").prop("defaultValue");
+            console.log(resutl3); //hello
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <form action="#" id="form_1">
+       <p>
+          <label for="user_name">이름</label> 
+          <input type="text" name="user_name"
+             id="user_name" value="용대리">
+       </p>
+       <p>
+          <label for="user_id">아이디</label> 
+          <input type="text" name="user_id"
+             id="user_id" value="hello">
+       </p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그의 속성 조작</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //태그의 속성조작
+        //attr("속성명"), attr("속성명","새로운 값"), removeAttr("속성명")
+
+        $(function(){
+            let srcVal = $("#sec_1 img").attr("src");
+            console.log(srcVal)
+
+
+            $("#sec_1 img").attr({"width":200,"src":srcVal.replace("1.jpeg","2.jpeg"),
+            "alt" : "바위"
+        }).removeAttr("border"); //경계선 제거 
+        });
+    </script>
+</head>
+<body>
+    <h1><strong>객체 조작 및 생성</strong></h1>
+   <section id="sec_1">
+      <h2>이미지 속성</h2>
+      <p><img src="./images/math_img_1.jpeg" alt="바위" border="2"></p>
+   </section>
+</body>
+</html>

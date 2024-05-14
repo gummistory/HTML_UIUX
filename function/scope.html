@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 스코프 함수 호출 </title>
+    <script>
+        //scope 스코프
+        // 함수의 호출 특징
+        // 호이스팅 선언위치와 호출위치의 관계 
+
+        //익명함수 // 불가 // 
+        //add(); //익명함수 호이팅 불가  
+        let add = function () {
+            document.write("hello")
+        }
+
+        //변수 스코프
+        //1. var : 함수 레벨 스코프
+        function func() {
+            if (true) {
+                var a = 6;
+                console.log(a);
+            }
+            console.log(a);
+        }
+
+        func();
+        //console.log(a); //호출 불가 
+
+        //2.let, const : 블럭 레벨 스코프 
+
+        function fun() {
+            if (true) {
+                let a = 5; //지역 변수 
+                console.log(a);
+            }
+            // console.log(a); // 불가 error 블럭안에서만 호출 가능
+        }
+
+        fun();
+
+        // var 타입은  호이스팅이 가능
+        console.log(b)
+        var b = 7;
+
+        // let, const 타입은 호이스팅 불가능 
+        console.log(c); // 불가능
+        let c = 1;
+        //console.log(c); // 가능
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

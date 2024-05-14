@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 이용하여 구구단 만들기</title>
+  
+    <script>
+    let str; // 변수 만들기
+    str = "<table border='1' style='border-collapse: collapse;'>"; // HTML 테이블 시작 태그 및 테두리 병합
+    str += "<tr style='text-align: center; font-weight: bold;'>"; //글자 굴게 
+        
+    for (let i = 2; i <= 9; i++) {
+    str += "<td>" + i + "단</td>"; // 각각의 단 추가
+    }
+
+    str += "</tr>"; // 첫 번째 행 종료 태그
+    for (let j = 1; j <= 9; j++) {
+    str += "<tr>"; // 각 행 시작 태그
+    
+    for (let k = 2; k <= 9; k++) {
+        str += "<td>" + k + " * " + j + " = " + (k * j) + "</td>"; // 곱셈 표시
+     }
+    str += "</tr>"; // 각 행 종료 태그
+    }
+
+    str += "</table>"; // HTML 테이블 종료 태그
+
+    document.write(str); // 결과 출력
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

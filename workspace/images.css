@@ -1,0 +1,5 @@
+.test img {
+    border-radius: 50%; /* 이미지 테두리를 원형으로 설정 */
+    border: 2px solid black; /* 테두리를 2px 두께의 검은 실선으로 설정 */
+    box-shadow: 5px 5px 30px 2px black; /* 가로 세로 5px 흐림, 30px 번짐, 2px 검정색 그림자 추가 */
+}

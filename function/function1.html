@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 명명함수</title>
+    <script>
+        function add() {
+            document.write(2 + 3 + "<br>");
+        }
+
+        add();
+
+        function add2(x,y){
+            document.write(x + y);
+        }
+        add2(3,4);
+
+        function add3(x,y){
+            let sum = x + y;
+            return sum;
+        }
+        document.write(add3(10,20) + "<br>")
+
+
+        // java 와 동일하게 사용 
+        function add4(x){
+            if(x == 10){
+                return;
+            }
+            document.write(x);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

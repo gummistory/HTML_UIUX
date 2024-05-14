@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 이벤트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // <a> <form> 링크속성 제거와 클릭이벤트 적용하기
+            // <a href="#"> <form action="#">
+            // 1. return false
+            // 2. e.preventEdfault()
+
+            $(".btn1").on("click", function(e){
+                e.preventDefault(); // 링크속성 금지(페이지 이동X)
+                $(".txt1").css({"background-color":"red"})
+            });
+
+            $(".btn2").on("click", function(){
+                $(".txt2").css({"background-color":"red"})
+                return false;
+            });
+
+            $(".btn3").on("click", function(){
+                $(".txt3").css({"background-color":"red"})
+            });
+        });
+    </script>
+</head>
+
+<body>
+    [킹] [오전 9:10] <select id="rel_site">
+        <option value="">사이트 선택</option>
+        <option value="www.google.com">구글</option>
+        <option value="www.naver.com">네이버</option>
+        <option value="www.daum.net">다음</option>
+    </select>
+    <p class="txt"></p>
+    [킹] [오전 9:30] <p><a href="http://www.easyspub.co.kr/" class="btn1">버튼1</a></p>
+    <p class="txt1">내용1</p>
+    <p><a href="http://www.easyspub.co.kr/" class="btn2">버튼2</a></p>
+    <p class="txt2">내용2</p>
+    <p><button class="btn3">버튼3</button></p>
+    <p class="txt3">내용3</p>
+
+</body>
+
+</html>

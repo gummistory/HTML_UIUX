@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab menu</title>
+    <style>
+        * {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            /*부모꺼 상속받으면 같은 색상 적용한다*/
+        }
+
+        .tab {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .tab__item {
+            padding: 0.6rem 1.3rem;
+            margin-right: 1rem;
+            border: 1px solid pink;
+            border-radius: 2rem;
+        }
+
+        .tab__item.active {
+            display: inline-block;
+            border: 1px solid #b81c0f;
+            background-color: #b81c0f;
+            color: white;
+        }
+
+        .tab__content-wrapper {
+            padding: 1rem;
+
+        }
+
+        .tab__content {
+            display: none;
+        }
+
+        .tab__content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="tab">
+        <li class="tab__item active">
+            <a href="#tab1">Tab 1</a>
+        </li>
+        <li class="tab__item">
+            <a href="#tab2">Tab 2</a>
+        </li>
+        <li class="tab__item">
+            <a href="#tab3">Tab 3</a>
+        </li>
+        <li class="tab__item">
+            <a href="#tab4">Tab 4</a>
+        </li>
+    </ul>
+
+    <!-- 탭 내용 영역 -->
+    <div class="tab__content-wrapper">
+        <div id="tab1" class="tab__content active">첫번째 탭 내용</div>
+        <div id="tab2" class="tab__content">두번째 탭 내용</div>
+        <div id="tab3" class="tab__content">세번째 탭 내용</div>
+        <div id="tab4" class="tab__content">네번째 탭 내용</div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabList = document.querySelectorAll('.tab .tab__item');
+            const contents = document.querySelectorAll('.tab__content');
+
+            let activeCont = '#tab1'; // 초기 활성화된 컨텐츠
+
+            tabList.forEach(function (tab, index) {
+                tab.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // 모든 탭과 컨텐츠에서 active 클래스 제거
+                    tabList.forEach(function (tab) {
+                        tab.classList.remove('active');
+                    });
+                    contents.forEach(function (content) {
+                        content.classList.remove('active');
+                    });
+
+                    // 클릭된 탭과 해당하는 컨텐츠에 active 클래스 추가
+                    this.classList.add('active');
+                    contents[index].classList.add('active');
+                });
+            });
+
+            // 초기 활성화된 컨텐츠 표시
+            document.querySelector(activeCont).classList.add('active');
+        });
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let numbers =[1,2,3,4,5]; // 배열에 맞는 값을 분해 할 수 있다.
+        console.log(numbers)
+        console.log(...numbers) // 펼친 연산자 
+
+
+        let nums = [1,2,3,4,5];
+        let max;
+        // for(let i =0; i<nums.length; i++){
+        //     if(nums[i] > nums[0]){
+        //         max = nums[i];
+        //     }
+        // }
+
+        // console.log(max); // 5
+        
+        
+        max = Math.max(...nums); // Math.max(2,3,1,6,4)
+        console.log(max);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

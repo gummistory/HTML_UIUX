@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 구성하기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('*').css("color","red");
+            $(".tit").css("color","blue");
+            $("h3").css("color","green");
+            $("h2.tit").css("color","red"); //종속 선택자 
+        });
+    </script>
+
+</head>
+<body>
+    <h1>1</h1>
+    <h2 class="tit">2</h2>
+    <h3>3</h3>
+</body>
+</html>

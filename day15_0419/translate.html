@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #container {
+                width: 800px;
+                height: 200px;
+                margin: 20px auto;
+            }
+            .origin {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                float: left;
+                margin: 40px;
+            }
+            .origin > div {
+                width: 100px;
+                height: 100px;
+                background-color: orange;
+            }
+
+            /* transform:속성값 */
+
+            #movex:hover {
+                /* transform: translateX(50px); */
+                /* transform: scaleX(2); */
+                transform: rotate(40deg);
+            }
+
+            #movey:hover {
+                /* transform: translateY(50px); */
+                /* transform: scaleY(1.5); */
+                transform: rotate(-40deg);
+            }
+
+            #movexy:hover {
+                /* transform: translate(50px,50px); */
+                /* transform: scale(0.7); */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="origin">
+                <div id="movex"></div>
+            </div>
+            <div class="origin">
+                <div id="movey"></div>
+            </div>
+            <div class="origin">
+                <div id="movexy"></div>
+            </div>
+        </div>
+    </body>
+</html>

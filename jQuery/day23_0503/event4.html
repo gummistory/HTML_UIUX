@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변화 속성</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // change : 요소의 변화 감지
+            // $(this) : 이벤트를 발생시킨 요소
+            $("#rel_site").on("change", function(){
+                $(".txt").text($(this).val()) // this : 이벤트를 발생시키는 주체
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <select id="rel_site">
+        <option value="">사이트 선택</option>
+        <option value="www.google.com">구글</option>
+        <option value="www.naver.com">네이버</option>
+        <option value="www.daum.net">다음</option>
+    </select>
+    <p class="txt"></p>
+</body>
+
+</html>

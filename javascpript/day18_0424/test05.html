@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do-while</title>
+    <script>
+        // do{
+        //     실행문
+        //     증감식
+        // }while(조건식);
+
+        // 반복문의 제어 
+        // break, continue
+
+        let str; //변수 만들기 
+        str = "<table border ='1'>";
+        for(let i = 1; i<=3; i++){
+            str += "<tr>";
+            for(let j = 1; j<=2; j++){
+                str += "<td>" +  i  + "행" + j + "열"  + "</td>"
+            }
+            str += "</tr>";
+        }
+
+        str += "</table>";
+
+        document.write(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

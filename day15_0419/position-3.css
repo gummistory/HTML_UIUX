@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#contents {
+    background:url('../images/bg.jpg') no-repeat;
+    background-size : cover;
+    width: 800px;
+    height: 500px;
+    
+    /* 부모요소가 자식의 기준점이 되려면 */
+    position: relative;  
+    top:100px;
+    left:100px;
+}
+
+h1{
+    color:red;
+    font-size:120px;
+    text-shadow: 2px 3px 0 #000;
+    /* 자식은 부모를 기준점으로 이동하기위해서 */
+    position: absolute;
+    right: 100px;
+    bottom :100px;
+}

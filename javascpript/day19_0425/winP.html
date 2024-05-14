@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부모창 (winP,C)</title>
+    <script>
+        //버튼을 클릭 했을때 새창이 뜨게 하는 예제
+        function newWin(){
+            window.open("winC.html", "", "width=400, hegiht=300,top=50,left=50"); // 창을 연결해주는 것 
+        }
+    </script>
+</head>
+<body>
+    <h1>Parent</h1>
+    <p>
+        <input type="text" id="parenValue">
+        <input type="button" value="new window" onclick="newWin()">
+    </p>
+    
+</body>
+</html>

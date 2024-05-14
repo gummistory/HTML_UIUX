@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 요소 편집2 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //객체 요소 편집
+        // 생성, 복제, 삭제 
+        // before(), after(), 
+        // append()-> 기준 앞 ,appendTo()-> 기준 뒤 
+        // prepend()-> 기준 앞, prependTo() -> 기준 뒤
+        // 중간자리 insertBefore(), insertAfter()
+        // remove()
+        $(function () {
+            //하위
+            $("<li>appendTo</li>").appendTo("#listZone"); //가장 마지막에
+            $("#listZone").prepend("<li>prepend</li>"); // 가장 앞쪽에 
+        });
+    </script>
+
+   
+</head>
+
+<body>
+    <ul id="listZone">
+        <li>리스트</li>
+     </ul>
+</body>
+
+</html>

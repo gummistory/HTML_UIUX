@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 하위 선택자 */
+        /* div p,h1{
+            color :red;
+        } */
+
+        /* div p, div h1{
+            color :red;
+        } */
+
+        /* div p {
+            color :red;
+        } */
+
+        /* div h1 {
+            color :red;
+        } */
+
+        /* 자식 선택자 */
+        /* div > p,h1 {
+            color:red;
+        } */
+
+        /* 인접 선택자 */
+        /* h1 + p {   첫번째 동생 
+            color:red;
+        } */
+
+        /* h1 ~ p {   동생들 
+            color:red;
+        } */
+
+        /* 속성 선택자 */
+        /* a[href] {
+            color: red;
+        }
+
+        a[target="_blank"] {
+            color:rgb(245, 188, 3);
+        } */
+
+        [class ~= "button"] {
+            color:red;
+        }
+
+        /* a[title ^= "eng"] {
+            color:red;
+        }
+
+        a[title $= "ese"] {
+            color:red;
+        } */
+
+        /* a[title *= "e"]{
+            color:red;
+        } */
+
+        /* 가상클래스와 가상요소 */
+        /* a:link {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:active {
+            color:aqua;
+        }
+        a:visited {
+            color:chocolate
+        }
+
+        p:hover{
+            color:red;
+        } */
+
+        /* ul li input:checked + label {
+            color:red;
+        } */
+
+        /* 구조선택자 */
+        /* 특정위치에 있는 요소를 찾는 방법 */
+
+        /* 특정위치에 자식요소 선택자 */
+        /* .contents :nth-child(3){
+            color:red;
+        }
+
+        .contents p:nth-of-type(3){
+            color:rgb(0, 102, 255);
+        } */
+
+        /* ul li{
+            list-style-type: none;
+            float:left;
+        }
+
+        ul li:nth-child(2n){
+           background-color: blue;
+        }
+
+        ul li:nth-child(2n+1){
+           background-color: rgb(219, 10, 38);
+        } */
+        
+    </style>
+</head>
+<body>
+
+    <!-- <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+        <li>내용6</li>
+        <li>내용7</li>
+    </ul> -->
+
+    <!-- <div class="contents">
+        <h2>이용안내</h2>
+        <p>더 넓은 세상, 더 나은 미래를 위한 아시아 </p>
+        <p>마롤로뜨 캔버스 이유식 보냉백 </p>
+        <h2>객실소개</h2>
+        <p>마스크 20%↓+7%↓+5세트이상</p>
+        <h2>예약 방법 및 요금</h2>
+        <p>전 상품 무료배송 타임딜</p>
+    </div> -->
+
+
+
+    <!-- <ul>
+        <li>
+            <input type="radio" name="room"> checked="checked"  
+            <label>기본형(최대2)</label>
+        </li>
+        <li>
+            <input type="radio" name="room">
+            <label>가족형(최대8인)</label>
+        </li>  
+    </ul> -->
+
+
+
+    <!-- <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+    </ul>
+
+    <p>여기를 클릭하세요</p> -->
+
+
+
+
+
+    <!-- <ul>
+        <li><a>선택가능 메뉴</a></li>
+        <li><a href="#" class="button">메뉴1</a></li>
+        <li><a href="#" class="flat button">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#" target="_blank">메뉴4</a></li>
+        <li><a href="#" title="english">메뉴5</a></li>
+        <li><a href="#" title="japanese">메뉴6</a></li>
+        <li><a href="#">메뉴7</a></li>
+    </ul> -->
+
+
+
+    <!-- <div>
+        <p>
+            내용1 
+        </p>
+        <h1>내용2</h1>
+    </div> -->
+    <!-- <h1>내용1</h1>
+    <p>내용2</p>
+    <p>내용3</p>
+    <a href="http://www.navre.com">네이버</a> -->
+</body>
+</html>

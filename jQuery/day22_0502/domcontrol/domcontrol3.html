@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 속성 조작 하는 메소드 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // class 속성 조작
+        // addClass("class값"), removeClass("class값")
+        // toggleClass("class값"),hasClass("class값")
+        // hasClass : 클래스의 적용 유무를 확인하는 클래스 -> true / false
+        $(function () {
+            $("#p1").addClass("aqua");
+            $("#p2").removeClass("red");
+            $("#p3").toggleClass("green");
+            $("#p4").toggleClass("green");
+            $("#p6").text($("#p5").hasClass("yellow")) 
+        });
+    </script>
+    <style>
+        .aqua {
+            background-color: #0ff;
+        }
+
+        .red {
+            background-color: #f00;
+        }
+
+        .green {
+            background-color: #0f0;
+        }
+
+        .yellow {
+            background-color: #ff0;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1">내용1</p>
+    <p id="p2" class="red">내용2</p>
+    <p id="p3">내용3</p>
+    <p id="p4" class="green">내용4</p>
+    <p id="p5" class="yellow">내용5</p>
+    <p id="p6"></p>
+</body>
+
+</html>

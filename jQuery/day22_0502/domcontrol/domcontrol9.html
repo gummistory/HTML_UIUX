@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 요소 복제, 삭제</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        
+        $(function () {
+           //clone() : 복제
+           //remove() : 삭제 (해당요소를 포함한 모두 )
+           //empty() : 삭제 (해당 요소만= 하위 요소만 )
+           let copyObj = $(".box1").children().clone();
+           $(".box2").remove();
+           $(".box3").empty();
+           $(".box3").append(copyObj);
+        });
+    </script>
+
+   
+</head>
+
+<body>
+    <div class="box1">
+        <p>내용1</p>
+        <p>내용2</p>
+     </div>
+     <div class="box2">
+        <p>내용3</p>
+        <p>내용4</p>
+     </div>
+     <div class="box3">
+        <p>내용5</p>
+        <p>내용6</p>
+     </div>
+</body>
+
+</html>

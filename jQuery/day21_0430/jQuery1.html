@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //속성 선택자 
+            $("#wrap a[target]").css("color", "red");
+            $("#wrap a[href^=https]").css("color", "blue");
+            $("#wrap a[href$=net]").css("color", "green");
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p><a href="http://www.naver.com" target="_blank">naver</a></p>
+        <p><a href="http://www.daum.net">daum</a></p>
+    </div>
+</body>
+</html>

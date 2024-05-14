@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 관련 메소드 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //배열 관련 메소드
+        //each, foreach
+        // map :
+        $(function(){
+          let obj = [
+            {"area" : "서울"},
+            {"area" : "부산"},
+            {"area" : "전주"},
+          ]
+            $(obj).each(function(i,o){  // i는 인덱스 번호, o는 실제 데잍터
+                console.log(i + ":" , o)
+            });
+            $.each($("#menu2 li"),function(i,o){
+                console.log(i + ":" , o)
+            })
+
+            obj.forEach(function(value,index,array){
+                console.log(`value: ${value}, Index: ${index}, Array : ${array}`)
+            });
+
+            let arr1 = [
+                {
+                    "area" : "서울",
+                    "name" : "구경민"
+                },
+                {
+                    "area" : "남양주",
+                    "name" : "박진우"
+                },
+                {
+                    "area" : "서울",
+                    "name" : "오진후"
+                },
+                {
+                    "area" : "인천",
+                    "name" : "오해준"
+                },
+                {
+                    "area" : "아현",
+                    "name" : "임주연"
+                },
+            ];
+            let arr2 = $.map(arr1,function(a,b){ //a가 배열의 값, b가 index
+                if(a.area == '서울'){
+                    return a;
+                }
+            });
+             console.log(arr1);
+             console.log(arr2);
+
+             let index = $("li").index($("#list3"));
+             console.log(index);
+
+    });
+    </script>
+
+</head>
+<body>
+ <ul id="menu1">
+        <li>내용1_1</li>
+        <li>내용1_2</li>
+        <li id = "list3">내용1_3</li>
+        <li>내용1_4</li>
+    </ul>
+    <!-- <ul id="menu2">
+        <li>내용2_1</li>
+        <li>내용2_2</li>
+        <li>내용2_3</li>
+    </ul> -->
+</body>
+
+</html>

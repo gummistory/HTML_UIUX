@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>Child</title>
+    <style>
+      * {
+        font-family: Consolas, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>아이디중복 확인</h1>
+    <p>
+      <input type="text" id="childValue">
+      <input type="button" value="창닫기" onclick="sendValue();">
+    </p>
+    <script>
+           // 부모 창에서 입력한 아이디 값을 자식 창에 표시
+        document.getElementById("childValue").value = window.opener.document.getElementById("parentValue").value;
+
+       // 자식 창 닫을 때, 부모 창에 자식 창의 아이디 값을 표시
+        function sendValue() {
+       window.opener.document.getElementById("id").value = document.getElementById("childValue").value;
+    window.close();
+}   
+         
+
+    </script>
+  </body>
+</html>

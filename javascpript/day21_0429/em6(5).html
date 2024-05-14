@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //순차적인 데이터 사용 할때 많이 사용 
+        let numbers = [1,2,3,4,5];
+        for(let i of numbers){
+            console.log(i)
+        }
+
+
+        //표현식 (백티)
+        let name = 'hong';
+        console.log("나의 이름은 " + name + " 입니다.")
+
+        let num1 = 1;
+        let num2 = 2;
+        let text = `${num1}과 ${num2}의 합계는  ${num1 + num2} 입니다.`
+        console.log(text)
+        
+        // 배열의 비구조화
+        //em5
+        let nums = [3,4];
+        let a,b;
+        a = nums[0];
+        b = nums[1];
+
+        //em6
+        let numb = [3,4];
+        let [c,d] = numb;
+        console.log(c);
+        console.log(d);
+
+
+
+        let numa = [2,4,5];
+        let [v, ,h] = numa
+        
+        console.log(`${v} ${h}`); //2 , 5
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

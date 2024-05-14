@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - 1 </title>
+    <script src="test01.js"></script>
+    <script>
+        //메세지 함수 
+        function message (){
+            alert('hello');
+        }
+    </script>
+</head>
+<body>
+    1. 임베디드한 방식
+    <p onclick="alert('hello')">여기를 클릭하세요1</p>
+    2. 내부에 정의하는 방식
+    <p ondblclick="message()">여기를 클릭하세요2</p>
+    3. 외부에 정의하는 방식
+    <p ondblclick="message2()">여기를 클릭하세요3</p>
+</body>
+</html>

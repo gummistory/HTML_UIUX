@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+        let htag = document.getElementsByClassName("myclass");
+        //console.log(htag);
+        setTimeout(()=>{
+            htag[0].style.color = "red"; //배열형태로 사용해야한다. Object.style.속성 = 값
+        },3000);
+    
+      };
+    </script>
+</head>
+<body>
+    <h4>getElementByClassName Method in Javascript document</h4>
+    <h1 class="myclass"> hello world</h1>
+</body>
+</html>

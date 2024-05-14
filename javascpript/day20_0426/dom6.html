@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let test = document.querySelectorAll(".test");
+            // 배열이니 for문 사용
+            for(let i=0; i<test.length; i++){
+                test[i].innerHTML = i; //배열 함수 
+             }
+        };
+    </script>
+</head>
+<body>
+    <p class="test">test1</p>
+    <p class="test">test2</p>
+    <p class="test">test3</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 객체 예제2 , 메일의 유효성 검사</title>
+    <script>
+        let userEmail = prompt("이메일 주소", "");
+        let arrU1r = [".co.kr", ".com", ".net", ".or.kr", "go.kr"];
+
+        let chk1 = false; // @ 검사
+        let chk2 = false; // arrurl 검사 
+
+        if (userEmail.indexOf("@")>0) {
+            chk1 = true;
+        } 
+        for(let i = 0; i <arrU1r.length; i++){
+            if(userEmail.indexOf(arrU1r[i]) > 0 ){
+                chk2 = true;
+            } 
+        }
+
+        if(chk1 && chk2){
+            document.write(userEmail);
+        }else{
+            alert("이메일 형식이 아닙니다.")
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
